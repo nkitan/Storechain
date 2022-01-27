@@ -1,7 +1,7 @@
 # Storechain
 
-C++ blockchain implementation to store user defined objects
-A block in storechain is called a unit. A unit is made up of multiple transactions called atoms.  
+C++ blockchain implementation to store user defined objects.  
+A block in storechain is called a unit and a single unit is made up of multiple transactions called atoms.  
   
 ## Usage    
 ### Defining stored class  
