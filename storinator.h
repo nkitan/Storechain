@@ -28,7 +28,7 @@ class storinator {
         }
         
         // insert a vector of transactions into a new block and add to blockchain
-        void addBatchTransactions(std::vector<UNIT_DATA_FORMAT> transactions){
+        void addUnit(std::vector<UNIT_DATA_FORMAT> transactions){
             // create new unit
             unit newUnit(this->storechain.back().getHash());
             
