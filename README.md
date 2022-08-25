@@ -11,7 +11,7 @@ unit_format.h contains a basic class with a string and an integer value in its d
 ### Compiling
 Compiling storechain is fast and easy and can be done using any C++ compiler. This has however been tested using g++ version 11.2.1.  
 ```bash
-g++ -o main main.cpp -lssl -lcrypto
+g++ -o storechain storechain.cpp -lssl -lcrypto
 ```
 ### Running
 Running the blockchain requires no command line arguments and can simply be run using
