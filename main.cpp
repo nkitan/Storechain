@@ -11,7 +11,7 @@ int main(){
     UDF abc("ABC", 1);
 
     // UDF objects can be added to the transaction list of a unit
-    blockchain.addUnit({AD,AB, sa, abc, satik});
+    blockchain.addUnit({AD, AB, sa, abc});
 
     // showAllUnits can be used to display all Units in the blockchain
     blockchain.showAllUnits();
