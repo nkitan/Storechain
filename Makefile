@@ -12,7 +12,7 @@
   all: $(TARGET)
  
   $(TARGET): $(TARGET).c
-              $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+              $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
  
   clean:
               $(RM) $(TARGET)
