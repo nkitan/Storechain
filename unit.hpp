@@ -6,12 +6,14 @@
 #include<openssl/sha.h>
 #include "unit_format.h"
 
+// unit = block
 class unit {
     private:
         std::vector<UNIT_DATA_FORMAT> list;
         std::string hash;
         std::string previousHash;
-
+    
+        // hash function
         std::string sha256(std::vector<UNIT_DATA_FORMAT> list){
             std::vector<UNIT_DATA_FORMAT> temp = list;
             if(!temp.empty()){
@@ -28,20 +30,24 @@ class unit {
             }
             return "null";
         }
-
+        
+        // generate hash and store in var
         void generateHash(){
             this->hash = sha256(list);
         }
 
     public:
+        // store previous hash
         unit(std::string previousHash){
             this->previousHash = previousHash;
         }
-
+        
+        // insert data into current block
         void transact(UNIT_DATA_FORMAT data){
             this->list.insert(list.end(), data);
         }
-
+        
+        // show all transactions of current block along with current hash
         void show(){
             for (auto &&transaction : this->list){
                 transaction.print();
@@ -49,7 +55,8 @@ class unit {
             std::cout<<this->getHash()<<"\n";
             std::cout<<"--------------\n";
         }
-
+        
+        // get current hash
         std::string getHash(){
             this->generateHash();
             return this->hash;
