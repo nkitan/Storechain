@@ -16,5 +16,5 @@ g++ -o storechain storechain.cpp -lssl -lcrypto
 ### Running
 Running the blockchain requires no command line arguments and can simply be run using
 ```bash
-./main
+./storechain
 ```
